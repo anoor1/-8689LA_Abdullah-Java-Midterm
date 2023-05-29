@@ -162,106 +162,180 @@ Answer: There can be multiple constructors in a class. However, the parameter li
         the same. This is known as constructor overloading.
 
 If we don't have a constructor declared, what is called during the object creation?
-Answer:
+Answer: A default constructor is created only when we don't declare any constructor in our code. Then, by default,
+        the compiler automatically creates a default constructor.
 
 What is "this" keyword in Java? When would we use it?
-Answer:
+Answer: The "this" keyword refers to the current object in a method or constructor.
+        The most common use of the "this" keyword is to eliminate the confusion between class attributes and parameters
+        with the same name (because a class attribute is shadowed by a method or constructor parameter).
 
 What is "super" keyword in Java? What are some scenarios we would use it?
-Answer:
+Answer: The super keyword refers to superclass (parent) objects.
+        It is used to call superclass methods, and to access the superclass constructor.
+        The most common use of the super keyword is to eliminate the confusion between superclasses and subclasses
+        that have methods with the same name.
 
 What does JVM stand for?
-Answer:
+Answer: Java Virtual Machine. the JVM loads, verifies and executes Java bytecode. It is known as the interpreter
+        or the core of  Java programming language because it executes Java programming.
 
 Is JVM platform independent?
-Answer:
+Answer: Yes. The meaning of Java platform-independent is that the Java compiled code(byte code) can run on all
+        operating systems.
 
 What version of Java are you using?
-Answer:
+Answer: Version 8
 
 What does JAR stand for?
-Answer:
+Answer: Java Archive. a JAR file is a file that contains a compressed version of .class files, audio files,
+        image files, or directories. We can imagine a .jar file as a zipped file(.zip) that is created by using
+        WinZip software
 
 What is the difference between JDK and JVM?
-Answer:
+Answer: JVM is an abstract machine.A java program execution uses a combination of compilation and interpretation.
+        Programs written in Java are compiled into machine language, but it is a machine language for a computer
+        that is, virtual and doesn't really exist.
+        Java Development Kit (JDK) is a bundle of software components that is used to develop Java based applications
 
 What is the difference between JVM and JRE?
-Answer:
+Answer: JRE contains the JVM, class libraries, and other supporting files. It does not contain any development tools
+        such as compiler, debugger, etc. Actually JVM runs the program, and it uses the class libraries, and other
+        supporting files provided in JRE.
 
 Explain the difference between compile-time and run-time?
-Answer:
+Answer: Compile-time is the time at which the source code is converted into an executable code while the
+        run time is the time at which the executable code is started running.
 
 What is heap?
-Answer:
+Answer: The Java heap is the area of memory used to store objects instantiated by applications running on the JVM.
 
 How does Java manage its memory?
-Answer:
+Answer: Heap stores the actual objects. It creates when the JVM starts up. The user can control the heap if needed.
+        It can be of fixed or dynamic size. When you use a new keyword, the JVM creates an instance for the object
+        in a heap. While the reference of that object stores in the stack. Stack Area generates when a thread creates.
+        It can be of either fixed or dynamic size. The stack memory is allocated per thread. It is used to store data and partial results. It contains references to heap objects.
 
 What is the difference between String, StringBuffer and StringBuilder?
-Answer:
+Answer: String is immutable whereas StringBuffer and StringBuilder are mutable classes. StringBuffer is thread-safe
+        and synchronized whereas StringBuilder is not. That's why StringBuilder is faster than StringBuffer.
+        String concatenation operator (+) internally uses StringBuffer or StringBuilder class.
 
 What is Singleton class?
-Answer:
+Answer: Singleton pattern restricts the instantiation of a class and ensures that only one instance of the
+        class exists in the Java Virtual Machine
 
 What is Serialization and Deserialization?
-Answer:
+Answer: Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the
+        reverse process where the byte stream is used to recreate the actual Java object in memory.
+        This mechanism is used to persist the object
 
 Explain the difference between While and Do..While loops?
-Answer:
+Answer: in the do-while loop, the loop body executes exactly once whether the condition is true or false, but in the
+        while loop, the loop body executes only if the condition is true.
 
 What is Enum?
-Answer:
+Answer: An enum is a special "class" that represents a group of constants
+        (unchangeable variables, like final variables).
 
 What is Iterator?
-Answer:
+Answer: An Iterator is an object that can be used to loop through collections, like ArrayList and HashSet.
+        It is called an "iterator" because "iterating" is the technical term for looping.
+        To use an Iterator, you must import it from the java.util package.
 
 Which one will take more memory: an int or Integer? Why?
-Answer:
+Answer: The Integer class is a wrapper class for the int, while the int is not a class at all. The Integer class allows
+        conversion to float, double, long and short, while the int doesn't. The Integer consumes slightly more memory
+        than the 32-bit Java int.
 
 Why are Strings considered to be immutable in Java?
-Answer:
+Answer: The term "immutable string" in Java refers to a string object that cannot be altered, but the reference
+        to the object can be changed. Every time we make a modification, a new instance of that string is created
+        and the previous value is copied to the new String with the change
 
 What is constructor chaining in Java?
-Answer:
+Answer: Constructor chaining refers to the ability to call a constructor inside another constructor. You can use a
+        constructor chain either within the same class or even with another one.
+        For the latter, the constructor should be through inheritance from the super class.
 
 The difference between Serial and Parallel Garbage Collector?
-Answer:
+Answer: Serial garbage collector uses a single thread for garbage collection process while the parallel garbage
+        collector uses multiple threads for the garbage collection
 
 What does JIT stands for?
-Answer:
+Answer: The Just-In-Time (JIT) compiler is a component of the runtime environment that improves the performance of Java
+        applications by compiling bytecodes to native machine code at run time.
 
 Explain the process of Java garbage collection?
-Answer:
+Answer: During the garbage collection process, the collector scans different parts of the heap, looking for objects
+        that are no longer in use. If an object no longer has any references to it from elsewhere in the application,
+        the collector removes the object, freeing up memory in the heap
 
 Can you guarantee the garbage collection process?
-Answer:
+Answer: No. It is perfectly possible for a programmer to mistakingly create objects
+        which never go out of scope, thus consuming more and more memory until all heap is exhausted.
+        It is the programmer's responsibility to ensure that objects no longer in use are no longer referenced
+        by the application.
 
 What is the difference between stack and heap in Java?
-Answer:
+Answer: Stack is used in parts, one at a time during execution of a thread.
+        Heap space uses the entire application during runtime.
+
+        Stack has size limits depending upon OS, and is usually smaller than Heap.
+        There is no size limit on Heap.
+
+        Stack stores only primitive variables and references to objects that are created in Heap Space.
+        Heap stores all the newly created objects.
 
 What is reflection in Java and why is it useful?
-Answer:
+Answer: Java reflection is useful because it supports dynamic retrieval of information about classes and data
+        structures by name, and allows for their manipulation within an executing Java program.
 
 What is multithreading in Java?
-Answer:
+Answer: Multithreading is a programming concept in which the application can create a small unit of tasks to execute
+        in parallel.
 
 What is synchronization in Java?
-Answer:
+Answer: Synchronization in java is the capability to control the access of multiple threads to any shared resource.
 
 What is a Framework?
-Answer:
+Answer: It's a Java platform for developing software applications and Java programs.
 
 What are the testing Frameworks available in Java?
-Answer:
+Answer: JUnit, Selenium, Apache JMeter, Cucumber, testNG
 
 What are jUnit and testNG?
-Answer:
+Answer: JUnit is a framework that is open-source and may be used to write and trigger tests.
+        TestNG is a Java-based framework that provides an improved way to run tests
 
 What are the dependencies for this project?
-Answer:
+Answer: gson-2.6.2.jar
+
+        jackson-annotations-2.11.3.jar
+
+        jackson-core-2.11.3.jar
+
+        jackson-databind-2.11.3.jar
+
+        java-json.jar
+
+        javax.json-1.0.jar
+
+        mongo-java-driver-3.4.0.jar
+
+        mysql-connector-java-8.0.28.jar
+
+        protobuf-java-3.11.4.jar
+
+        testng-6.8.7.jar
 
 What is dependency injection in Java?
-Answer:
+Answer: Dependency injection (DI) is the concept in which objects get other required objects from outside.
+        A Java class has a dependency on another class, if it uses an instance of this class.
+        We call this a class dependency. For example, a class which accesses a logger service has a
+        dependency on this service class.
 
 Explain what static binding and dynamic binding is?
-Answer:
+Answer: Static binding uses Type information for binding while Dynamic binding uses Objects to resolve binding.
+        Overloaded methods are resolved (deciding which method to be called when there are multiple methods
+        with same name) using static binding while overridden methods using dynamic binding, i.e, at run time.
