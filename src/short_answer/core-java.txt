@@ -33,61 +33,133 @@ Answer: A Class is like an object constructor, or a "blueprint" for creating obj
         The class contains attributes and methods, which is used for creating objects.
 
 What is an object?
-Answer:
+Answer: In the Java programming language, an object is an instance of a class, meaning it is a copy of a specific
+        class. Java objects have three primary characteristics: identity, state, and behavior.
 
 What is the entry point of a Java project?
-Answer:
+Answer: The entry point is a static method called main.
 
 Why is the main() method static?
-Answer:
+Answer: Java main() method is always static, so that compiler can call it without the creation of an object or before
+        the creation of an object of the class.
 
 Which class is the superclass of all classes?
-Answer:
+Answer: The super base class of all the Java classes is the java.lang.Object class. In Java, each Java descends from
+        the Object.
 
 What is difference between path and classpath variables?
-Answer:
+Answer: The ClassPath is a parameter in the Java Virtual Machine(JVM) or the Java compiler that is used by a system
+        or application ClassLoader to locate and load compiled Java bytecodes stored in the “.class” file.
+
+        The Path is also an environment variable path that behaves as a mediator between the operating system and
+        developer to inform binary file path.
 
 What is the difference between an Interface and Abstract class?
-Answer:
+Answer:  Difference between abstract classes and interfaces:
+          1. Interfaces also cannot be instantiated
+          2. Interfaces do not have a default constructor or any constructor
+          3. Interfaces are 100% abstract
+          4. All global variables are public, static, final by default
+          5. All methods are public, non-static and abstract by default
 
 Can you make an Object from an Interface and Abstract class? If yes or no, how would you do it?
-Answer:
+Answer: You cannot instantiate (create an object) directly from an Interface and Abstract class. What you can do is to
+        implement a subclass of abstract class which, of course, must not be abstract. For interface,
+        you must create a class which implement the interface and implement bodies of interface methods.
 
 What is Access Modifier?
-Answer:
+Answer: Access Modifiers - Restrict the visibility of a class, method or variable
+          1. Public - Accessible globally, from any other package
+          2. Private - Accessible ONLY within the class it is declared in
+          3. Protected - Accessible ONLY within the package it is contained within
+          4. Default - Same as protected
 
 What is OOP? Define each OOP concept.
-Answer:
+Answer: OOPs refers to languages that use objects in programming, they use objects as a primary source to implement
+        what is to happen in the code. Objects are seen by the viewer or user, performing tasks assigned by you. The main aim
+        of OOP is to bind together the data and the functions that operate on them so that no other part of the code can access
+        this data except that function.
+
+       Abstraction: Abstraction is the property by virtue of which only the essential details are displayed to the user.
+       The trivial or non-essential units are not displayed to the user. Ex: A car is viewed as a car rather
+       than its individual components.
+
+       Encapsulation: It is defined as the wrapping up of data under a single unit. It is the mechanism that
+       binds together the code and the data it manipulates. Another way to think about encapsulation is that it is a
+       protective shield that prevents the data from being accessed by the code outside this shield.
+
+       Inheritance: Inheritance is the mechanism by which one class is allowed to inherit the
+       features (fields and methods) of another class. We are achieving inheritance by using extends keyword.
+       Inheritance is also known as “is-a” relationship.
+
+       Polymorphism: It refers to the ability of oop languages to differentiate between
+       entities with the same name efficiently. The creation of methods of the same name is called method overloading.
+       3 Things That Allow Method Overloading:
+       1 - The number/quantity of parameters
+       2 - The type of parameters
+       3 - Position/Order of parameters
 
 What is Java Package and which package is imported by default?
-Answer:
+Answer: A java package is a group of similar types of classes, interfaces and sub-packages.
+        Package in java can be categorized in two form, built-in package and user-defined package.
+        Java package is used to categorize the classes and interfaces so that they can be easily maintained.
+        Java package removes naming collision.
+        By default, the java.lang package is imported in a java program.
 
 What is an API? List some API's that you have used so far.
-Answer:
+Answer: An application programming interface (API) is the medium by which different software interact.
+        They foster connections between technologies to enhance user experience. Examples of API used: Paypal,
+        Google Maps, Travel Booking.
 
 Does java support multiple inheritance? Why or why not?
-Answer:
+Answer: multiple inheritances cause a diamond problem in Java. For example, if we have the same method fun() in two
+        classes called Parent1 and Parent2, calling the method fun() using Test object will cause complications
+        such as whether to call Parent1’s fun() or Parent2’s fun() method.
+        Therefore, in order to avoid such complications, Java does not support multiple inheritances of classes.
 
 What is method overloading? List all of the different ways to overload.
-Answer:
+Answer: Method overloading in java is a feature that allows a class to have more than one method with the same name,
+        but with different parameters.
+        3 Things That Allow Method Overloading:
+               1 - The number/quantity of parameters
+               2 - The type of parameters
+               3 - Position/Order of parameters
 
 Explain exceptions in java and how to handle them.
-Answer:
+Answer: Java exceptions are specialized events that indicate something bad has happened in the application,
+        and the application either needs to recover or exit. Java exception handling is important because it helps
+        maintain the normal, desired flow of the program even when unexpected events occur.
+        If Java exceptions are not handled, programs may crash or requests may fail.
+
+        The try-catch is the simplest method of handling exceptions. Put the code you want to run in the try block,
+        and any Java exceptions that the code throws are caught by one or more catch blocks.
 
 What is static keyword? When and how do we use it?
-Answer:
+Answer: In Java, static keyword is mainly used for memory management. It can be used with variables, methods, blocks
+        and nested classes. It is a keyword which is used to share the same variable
+        or method of a given class. Basically, static is used for a constant variable or a method that is same for
+        every instance of a class.
 
 What is final keyword? When and how do we use it?
-Answer:
+Answer: In Java, the final keyword is used to indicate that a variable, method, or class cannot be modified or extended.
+        Here are some of its characteristics:
+
+        Final variables: When a variable is declared as final, its value cannot be changed once it has been initialized. This is useful for declaring constants or other values that should not be modified.
+        Final methods: When a method is declared as final, it cannot be overridden by a subclass. This is useful for methods that are part of a class’s public API and should not be modified by subclasses.
+        Final classes: When a class is declared as final, it cannot be extended by a subclass. This is useful for classes that are intended to be used as is and should not be modified
 
 Explain the difference between final, finally and finalize?
-Answer:
+Answer: Each of these keywords has a different functionality. The basic difference between final, finally and finalize
+        is that the final is an access modifier, finally is the block in Exception Handling and finalize is the
+        method of object class.
 
 What is a constructor?
-Answer:
+Answer: Constructor in java is used to create the instance of the class. Whenever we use new keyword to create an
+        instance of a class, the constructor is invoked and the object of the class is returned
 
 Can we have multiple constructors in a class?
-Answer:
+Answer: There can be multiple constructors in a class. However, the parameter list of the constructors should not be
+        the same. This is known as constructor overloading.
 
 If we don't have a constructor declared, what is called during the object creation?
 Answer:
