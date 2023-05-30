@@ -8,8 +8,27 @@ public class Permutation {
      * e.g. -  "ABC" = "ABC" "ACB" "BAC" "BCA" "CAB" "CBA"
      */
 
-    public static void main(String[] args) {
 
+    // Implement here
+    public void stringPermutaion(String prefix, String str) {
+        int length = str.length();
+
+        if (length == 0) {
+            System.out.println(prefix);
+            return;
+        }
+        for(int i = 0; i <length; i ++) {
+            stringPermutaion(prefix + str.charAt(i), str.substring(0,i) + str.substring(i+1,length));
+
+        }
     }
-    // Implement Here
-}
+    public void permutation(String str){
+        stringPermutaion("",str);
+    }
+    public static void main (String[] args) {
+        Permutation p = new Permutation();
+        p.permutation("ABC");
+    }
+    }
+
+

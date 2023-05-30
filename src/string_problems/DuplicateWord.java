@@ -11,19 +11,19 @@ public class DuplicateWord {
      */
 
     public static void main(String[] args) {
-        String st = "Java is a programming Language. Java is also an Island of Indonesia. Java is widely used language";
+        String str = "Java is a programming Language. Java is also an Island of Indonesia. Java is widely used language";
 
         // Implement here
-        String[] s = st.split(".");
+        String[] s = str.split(" ");
 
         Map<String, Integer> map = new HashMap<String, Integer>();
 
-        for (String str : s) {
+        for (String st : s) {
             Integer old = map.get(st);
             if(old == null) {
                 old = 0;
             }
-            map.put(str, old+1);
+            map.put(st, old+1);
         }
         System.out.println("Duplicate words and the number of occurrence: " + map);
     }
