@@ -1,5 +1,8 @@
 package string_problems;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class DuplicateWord {
 
     /** INSTRUCTIONS
@@ -11,7 +14,18 @@ public class DuplicateWord {
         String st = "Java is a programming Language. Java is also an Island of Indonesia. Java is widely used language";
 
         // Implement here
+        String[] s = st.split(".");
 
+        Map<String, Integer> map = new HashMap<String, Integer>();
+
+        for (String str : s) {
+            Integer old = map.get(st);
+            if(old == null) {
+                old = 0;
+            }
+            map.put(str, old+1);
+        }
+        System.out.println("Duplicate words and the number of occurrence: " + map);
     }
 
 }
