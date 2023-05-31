@@ -11,6 +11,21 @@ public class Pattern {
      */
 
     public static void main(String[] args) {
+        int step = 1;
+        int counter = 0;
+        System.out.print("100,");
+        for(int i = 99; i>0; i -= step) {
+
+            counter ++;
+            if (counter == 10){
+                step ++;
+                counter = 0;
+
+            }
+            System.out.print(i+",");
+
+        }
+
 
     }
 }
