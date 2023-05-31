@@ -39,7 +39,7 @@ public class Anagram {
                                                           both strings do not match,  it is not an anagram. */
                 System.exit(0);
             }
-            System.out.print("the two Strings are Anagrams"); // if both programs are not executed, it is an Anagram.
+            System.out.println("the two Strings are Anagrams"); // if both programs are not executed, it is an Anagram.
         }
 
     }
