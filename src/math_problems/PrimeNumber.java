@@ -24,7 +24,7 @@ public class PrimeNumber {
                 }
             }
             if (isPrime) {
-                System.out.println(i);
+                System.out.println("The less efficient way to print prime numbers: \n " + i);
             }
 
         }
@@ -44,7 +44,7 @@ public class PrimeNumber {
 
         for (int number = 2; number <= end; number++) {
             if (isPrimeNumber[number]) {
-                System.out.println(number);
+                System.out.println("The more efficient way to print prime numbers: \n" + number);
             }
         }
     }

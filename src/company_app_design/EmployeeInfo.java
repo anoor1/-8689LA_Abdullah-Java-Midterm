@@ -50,7 +50,11 @@ public class EmployeeInfo extends SuperEmployee {
         this.name = name;
     }
 
-   public int employeeId(){
+    public EmployeeInfo() {
+
+    }
+
+    public int employeeId(){
         return this.id;
 
     }

@@ -64,7 +64,12 @@ public class SortEfficiency {
         randomize(numberArray);
 
         // region Bubble Sort
+        numberArray = sort.bubbleSort(numberArray);
 
+        long bubbleSortExecutionTime = sort.executionTime;
+
+        System.out.println("Total Execution Time of " + numberArray.length + " numbers in Bubble Sort took: "
+                + bubbleSortExecutionTime + " milliseconds");
         // endregion
 
         randomize(numberArray);

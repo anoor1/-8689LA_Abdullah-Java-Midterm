@@ -15,6 +15,8 @@ public class CompanyEmployee {
     public static void main(String[] args) {
         EmployeeInfo employee1 = new EmployeeInfo(1);
         EmployeeInfo employee2 = new EmployeeInfo("Bob", 1234 );
+        EmployeeInfo employee3 = new EmployeeInfo();
+
 
         System.out.println(employee1.calculateSalary(50));
 
