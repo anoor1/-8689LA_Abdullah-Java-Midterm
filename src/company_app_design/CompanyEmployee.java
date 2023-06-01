@@ -13,6 +13,18 @@ public class CompanyEmployee {
      *  Try to think like a Software Developer
      */
     public static void main(String[] args) {
+        EmployeeInfo employee1 = new EmployeeInfo(1);
+        EmployeeInfo employee2 = new EmployeeInfo("Bob", 1234 );
+
+        System.out.println(employee1.calculateSalary(50));
+
+       int pension = EmployeeInfo.calculateEmployeePension();
+       System.out.println("The employee pension is: " + pension);
+
+       System.out.println("The first employee id is: " + employee1.employeeId());
+       System.out.println("The second employee name is: " + employee2.employeeName());
+
+
 
     }
 

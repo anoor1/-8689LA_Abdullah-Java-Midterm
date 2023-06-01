@@ -18,10 +18,10 @@ public interface Employee {
 
     String employeeName();
 
-    void assignDepartment();
+    void assignDepartment(String department);
 
-    int calculateSalary();
+    int calculateSalary(int rate);
 
-    void benefits();
+    void benefits(String benefit);
 
 }
