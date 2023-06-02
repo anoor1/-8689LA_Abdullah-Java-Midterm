@@ -59,7 +59,6 @@ public class SortingAlgorithms {
         }
         final long endTime = System.currentTimeMillis();
         this.executionTime = endTime - startTime;
-
         return array;
     }
 
@@ -67,8 +66,6 @@ public class SortingAlgorithms {
         // IMPLEMENT HERE
         final long startTime = System.currentTimeMillis();
         // IMPLEMENT HERE
-
-
         int[] result = Arrays.copyOf(array, array.length);
         int a = result.length;
         for( int i =0; i < a-1; i++){
@@ -88,6 +85,7 @@ public class SortingAlgorithms {
 
     public int[] mergeSort(int[] array) {
         // IMPLEMENT HERE
+
 
         return array;
     }
