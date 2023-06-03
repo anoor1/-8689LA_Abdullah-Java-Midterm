@@ -26,7 +26,7 @@ public class SortEfficiency {
 
     public static void main(String[] args) throws Exception {
         // Declare and initialize an array of a desired length with random numbers (Try this with 100, 1000, 10000, 100000)
-        int[] numberArray = new int[100];
+        int[] numberArray = new int[1000];
         insertRandomNumbersIntoArray(numberArray);
 
         SortingAlgorithms sort = new SortingAlgorithms();
@@ -75,6 +75,12 @@ public class SortEfficiency {
         randomize(numberArray);
 
         // region Merge Sort
+        numberArray = sort.mergeSort(numberArray);
+
+        long mergeSortExecutionTime = sort.executionTime;
+
+        System.out.println("Total Execution Time of " + numberArray.length + " numbers in merge Sort took: "
+                + mergeSortExecutionTime + " milliseconds");
 
         // endregion
 
