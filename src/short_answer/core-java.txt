@@ -154,7 +154,7 @@ Answer: Each of these keywords has a different functionality. The basic differen
         method of object class.
 
 What is a constructor?
-Answer: Constructor in java is used to create the instance of the class. Whenever we use new keyword to create an
+Answer: Constructor in java is used for creating the instance of the class. Whenever we use new keyword to create an
         instance of a class, the constructor is invoked and the object of the class is returned
 
 Can we have multiple constructors in a class?
