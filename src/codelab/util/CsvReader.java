@@ -18,7 +18,7 @@ public class CsvReader {
 
     public static void main(String[] args) {
         // define the path to the file.
-        String csvFilePath = System.getProperty("user.dir") + "\\src\\CodeLab\\data\\roster.csv";
+        String csvFilePath = System.getProperty("user.d ir") + "\\src\\CodeLab\\data\\roster.csv";
         //Read the csv file and obtain the roster
         List<Student> roster = readCsvFile(csvFilePath);
 
