@@ -10,7 +10,7 @@ public class Permutation {
 
 
     // Implement here
-    public void stringPermutaion(String prefix, String str) {
+    public void stringPermutation(String prefix, String str) {
         int length = str.length();
 
         if (length == 0) {
@@ -18,12 +18,12 @@ public class Permutation {
             return;
         }
         for(int i = 0; i <length; i ++) {
-            stringPermutaion(prefix + str.charAt(i), str.substring(0,i) + str.substring(i+1,length));
+            stringPermutation(prefix + str.charAt(i), str.substring(0,i) + str.substring(i+1,length));
 
         }
     }
     public void permutation(String str){
-        stringPermutaion("",str);
+        stringPermutation("",str);
     }
     public static void main (String[] args) {
         Permutation p = new Permutation();
