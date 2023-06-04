@@ -50,7 +50,7 @@ public class DuplicateWord {
         }
         double averageLength = (double) totalLength / words.length;
 
-        System.out.println("Average length of words: " + averageLength);
+        System.out.println("Average length of words is: " + averageLength);
     }
 }
 
