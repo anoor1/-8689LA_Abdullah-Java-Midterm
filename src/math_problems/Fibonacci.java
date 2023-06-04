@@ -13,6 +13,8 @@ public class Fibonacci {
         int n = 40;
         fibonacciCache = new long[n + 1];
 
+        System.out.println("The Fibonacci sequences are:");
+
         for (int i = 0; i < n; i++) {
 
             System.out.print(fibonacci(i) + " ");
