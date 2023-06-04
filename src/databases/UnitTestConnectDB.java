@@ -17,7 +17,7 @@ public class UnitTestConnectDB {
 
         SharedStepsDatabase ssdb = new SharedStepsDatabase();
 
-       //  region ExecuteQueryReadOne
+       //  region ExecuteQueryReadOne from World table in mySQL
         String query = "SELECT* FROM WORLD.CITY LIMIT 10";
         String result = ssdb.executeQueryReadOne(query);
 

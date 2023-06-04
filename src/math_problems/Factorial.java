@@ -34,10 +34,10 @@ public class Factorial {
     public static void main(String[] args) {
         int x = 5;
          int factorialIt = Factorial.factorialByIteration(x);
-        System.out.println("The Factorial of " + x + " = " + factorialIt);
+        System.out.println("With the iteration method, The Factorial of " + x + " = " + factorialIt);
         int y = 5;
           int result = Factorial.factorialByRecursion(y);
-          System.out.println("The Factorial of " + y + " = " + result);
+          System.out.println("With the recursion method, The Factorial of " + y + " = " + result);
     }
 }
 
