@@ -1,16 +1,18 @@
 package sorting;
 
 import java.util.Arrays;
-
+import java.util.*;
+import java.util.Collections;
 public class SortingAlgorithms {
 
 
-    /** INSTRUCTIONS
+    /**
+     * INSTRUCTIONS
      * You must implement all of the sorting algorithms below. Feel free to add any helper methods that you may need,
      * but make sure they are private, as to not be accessed outside of this class.
-     *
+     * <p>
      * You must also store the sorted arrays into their own individual database tables (Selection Sort should be stored
-     *  in table `selection_sort`, Insertion Sort should be stored in table `insertion_sort`)
+     * in table `selection_sort`, Insertion Sort should be stored in table `insertion_sort`)
      */
 
     long executionTime = 0;
@@ -21,7 +23,7 @@ public class SortingAlgorithms {
         }
     }
 
-     int[] selectionSort(int[] array) {
+    int[] selectionSort(int[] array) {
         final long startTime = System.currentTimeMillis();
 
         for (int i = 0; i < array.length - 1; i++) {
@@ -54,7 +56,7 @@ public class SortingAlgorithms {
 
             while ((j > 0) && (result[j] < result[j - 1])) {
 
-                result[j] = result[j -1];
+                result[j] = result[j - 1];
                 j--;
             }
         }
@@ -70,12 +72,12 @@ public class SortingAlgorithms {
         // IMPLEMENT HERE
         int[] result = Arrays.copyOf(array, array.length);
         int a = result.length;
-        for( int i =0; i < a-1; i++){
-            for ( int j = 0; j< a-1-i; j++){
-                if(result[j] > result[j+1]){
+        for (int i = 0; i < a - 1; i++) {
+            for (int j = 0; j < a - 1 - i; j++) {
+                if (result[j] > result[j + 1]) {
                     int temp = result[j];
-                    result[j] = result[j+1];
-                            result[j+1] = temp;
+                    result[j] = result[j + 1];
+                    result[j + 1] = temp;
 
                 }
             }
@@ -85,21 +87,20 @@ public class SortingAlgorithms {
         return result;
     }
 
-    void merge(int arr[], int l, int m, int r)
-    {
+    void merge(int arr[], int l, int m, int r) {
         // Find sizes of two subarrays to be merged
         int n1 = m - l + 1;
         int n2 = r - m;
 
         /* Create temp arrays */
-        int L[] = new int [n1];
-        int R[] = new int [n2];
+        int L[] = new int[n1];
+        int R[] = new int[n2];
 
         /*Copy data to temp arrays*/
-        for (int i=0; i<n1; ++i)
+        for (int i = 0; i < n1; ++i)
             L[i] = arr[l + i];
-        for (int j=0; j<n2; ++j)
-            R[j] = arr[m + 1+ j];
+        for (int j = 0; j < n2; ++j)
+            R[j] = arr[m + 1 + j];
 
 
         /* Merge the temp arrays */
@@ -109,15 +110,11 @@ public class SortingAlgorithms {
 
         // Initial index of merged subarray array
         int k = l;
-        while (i < n1 && j < n2)
-        {
-            if (L[i] <= R[j])
-            {
+        while (i < n1 && j < n2) {
+            if (L[i] <= R[j]) {
                 arr[k] = L[i];
                 i++;
-            }
-            else
-            {
+            } else {
                 arr[k] = R[j];
                 j++;
             }
@@ -125,16 +122,14 @@ public class SortingAlgorithms {
         }
 
         /* Copy remaining elements of L[] if any */
-        while (i < n1)
-        {
+        while (i < n1) {
             arr[k] = L[i];
             i++;
             k++;
         }
 
         /* Copy remaining elements of R[] if any */
-        while (j < n2)
-        {
+        while (j < n2) {
             arr[k] = R[j];
             j++;
             k++;
@@ -143,16 +138,14 @@ public class SortingAlgorithms {
 
     // Main function that sorts arr[l..r] using
     // merge()
-    void sort(int arr[], int l, int r)
-    {
-        if (l < r)
-        {
+    void sort(int arr[], int l, int r) {
+        if (l < r) {
             // Find the middle point
-            int m = (l+r)/2;
+            int m = (l + r) / 2;
 
             // Sort first and second halves
             sort(arr, l, m);
-            sort(arr , m+1, r);
+            sort(arr, m + 1, r);
 
             // Merge the sorted halves
             merge(arr, l, m, r);
@@ -171,14 +164,12 @@ public class SortingAlgorithms {
         return result;
 
 
-
-
     }
 
     public int[] quickSort(int[] array) {
         // IMPLEMENT HERE
         quickSort(array, 0, array.length - 1);
-    return array;
+        return array;
     }
 
     private static void quickSort(int[] array, int low, int high) {
@@ -263,14 +254,31 @@ public class SortingAlgorithms {
 
     public int[] bucketSort(int[] array) {
         //implement here
-        
-
         return array;
     }
+
 
     public int[] shellSort(int[] array) {
         //implement here
+        int n = array.length;
+
+        // Start with a large gap and reduce it in each iteration
+        for (int gap = n / 2; gap > 0; gap /= 2) {
+            // Perform insertion sort on elements at each gap
+            for (int i = gap; i < n; i++) {
+                int temp = array[i];
+                int j;
+
+                // Shift elements that are greater than the key to the right
+                for (j = i; j >= gap && array[j - gap] > temp; j -= gap) {
+                    array[j] = array[j - gap];
+                }
+
+                array[j] = temp;
+            }
+        }
 
         return array;
     }
+
 }

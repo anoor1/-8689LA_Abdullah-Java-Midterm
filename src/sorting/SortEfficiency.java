@@ -120,7 +120,13 @@ public class SortEfficiency {
         randomize(numberArray);
 
         // region Shell Sort
+        numberArray = sort.shellSort(numberArray);
 
+        long shellSortExecutionTime = sort.executionTime;
+
+        System.out.println("Total Execution Time of " + numberArray.length + " numbers in Shell Sort took: "
+                + shellSortExecutionTime + " milliseconds");
+        // endregion
         // endregion
     }
 
