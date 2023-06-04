@@ -19,7 +19,7 @@ public class UseQueue {
 
         Queue<String> queue = new LinkedList<>();
 
-        queue.add("Toyota"); // Add method. Adds elements to a queue
+        queue.add("Toyota"); // Add method adds elements to a queue
         queue.add("Honda");
         queue.add("BMW");
 
