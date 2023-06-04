@@ -87,7 +87,12 @@ public class SortEfficiency {
         randomize(numberArray);
 
         // region Quick Sort
+        numberArray = sort.quickSort(numberArray);
 
+        long quickSortExecutionTime = sort.executionTime;
+
+        System.out.println("Total Execution Time of " + numberArray.length + " numbers in Quick Sort took: "
+                + quickSortExecutionTime + " milliseconds");
         // endregion
 
         randomize(numberArray);
