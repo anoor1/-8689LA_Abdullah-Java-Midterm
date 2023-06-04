@@ -12,7 +12,7 @@ public class CollectionView {
      */
 
     public static void main(String[] args) {
-
+        //creating a hashMap and inserting string elements
         HashMap<Integer, String> map = new HashMap<Integer, String>();
         map.put(5, "San Jose");
         map.put(6, "Seattle");
