@@ -46,7 +46,7 @@ public class FindLowestDifference {
         int[] array1 = {30, 12, 5, 9, 2, 20, 33, 1, -15};
         int[] array2 = {18, 25, 41, 47, 17, 36, 14, 19, -15};
         int result = getLowestNumber(array1, array2);
-        System.out.println("the lowest number that is not shared between the two arrays is " + result);
+        System.out.println("the lowest number that is not shared between these two arrays is " + result);
     }
 
 
