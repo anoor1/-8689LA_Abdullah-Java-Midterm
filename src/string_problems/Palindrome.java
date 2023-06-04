@@ -31,7 +31,7 @@ public class Palindrome {
 
     public static void main(String[] args) {
         // Input string
-        String str = "MOM";
+        String str = "DAD";
 
         // Convert the string to lowercase
         str = str.toLowerCase();
