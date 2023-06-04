@@ -14,7 +14,7 @@ public class Pattern {
         int step = 1;
         int counter = 0;
         System.out.print("100,");
-        for(int i = 99; i>0; i -= step) {
+        for(int i = 99; i > 0; i -= step) {
 
             counter ++;
             if (counter == 10){
