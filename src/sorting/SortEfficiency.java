@@ -98,13 +98,23 @@ public class SortEfficiency {
         randomize(numberArray);
 
         // region Heap Sort
+        numberArray = sort.heapSort(numberArray);
 
+        long heapSortExecutionTime = sort.executionTime;
+
+        System.out.println("Total Execution Time of " + numberArray.length + " numbers in Heap Sort took: "
+                + heapSortExecutionTime + " milliseconds");
         // endregion
 
         randomize(numberArray);
 
         // region Bucket Sort
+        numberArray = sort.bucketSort(numberArray);
 
+        long bucketSortExecutionTime = sort.executionTime;
+
+        System.out.println("Total Execution Time of " + numberArray.length + " numbers in bucket Sort took: "
+                + bucketSortExecutionTime + " milliseconds");
         // endregion
 
         randomize(numberArray);
