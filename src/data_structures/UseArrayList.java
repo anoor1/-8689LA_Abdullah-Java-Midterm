@@ -15,7 +15,7 @@ public class UseArrayList {
 
     public static void main(String[] args) {
 
-        // Using add method to create an Arraylist
+        // Using add method to create a Linkedlist
         LinkedList<String> fruitList = new LinkedList<>();
         fruitList.add("Mango");
         fruitList.add("Apple");
