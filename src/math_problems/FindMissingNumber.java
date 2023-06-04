@@ -22,6 +22,6 @@ public class FindMissingNumber {
     public static void main(String[] args) {
         int[] numbers = {10, 2, 1, 4, 5, 3, 7, 8, 6}; // Example array with a missing number
         int missingNumber = findMissingElement(numbers);
-        System.out.println("The missing number is: " + missingNumber);
+        System.out.println("The missing number from the array is: " + missingNumber);
     }
 }
