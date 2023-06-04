@@ -41,6 +41,7 @@ public class UseMap {
     }
     // IMPLEMENT HERE
     static class SharedStepsDatabase {
+        //using mySQL to retrieve data from the world table
         private String url = "jdbc:mysql://localhost/world?serverTimezone=UTC&useSSL=false";
         private String username = "root";
         private String password = "Xmwy9999!";
