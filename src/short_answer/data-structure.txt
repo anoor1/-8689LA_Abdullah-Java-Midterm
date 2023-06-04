@@ -98,7 +98,7 @@ Answer: BFS stands for Breadth First Search. DFS stands for Depth First Search. 
         BFS uses a Queue to find the shortest path. DFS uses a Stack to find the shortest path.
 
 What is Recursion?
-Answer: In Java, a method that calls itself is known as a recursive method. And, this process is known as recursion.
+Answer: In Java, a method that calls itself is known as a recursive method.
         A physical world example would be to place two parallel mirrors facing each other.
         Any object in between them would be reflected recursively.
 
