@@ -20,6 +20,7 @@ public class DetermineLargestWord {
     }
 
     public static Map<Integer, String> findTheLargestWord(String wordGiven) {
+        //must create a hashmap
         Map<Integer, String> map = new HashMap<Integer, String>();
         String st = "";
         String[] array = wordGiven.split(" ");
