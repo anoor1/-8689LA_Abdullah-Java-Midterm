@@ -32,6 +32,7 @@ public class PrimeNumber {
 
     public static void PrimeNumbersMoreEfficient(int end) {  //This is the more efficient method
         boolean[] isPrimeNumber = new boolean[end + 1];
+
         Arrays.fill(isPrimeNumber, true);
 
         for (int start = 2; start * start <= end; start++) {
