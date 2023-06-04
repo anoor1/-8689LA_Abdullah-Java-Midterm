@@ -150,7 +150,7 @@ Answer: In Java, the final keyword is used to indicate that a variable, method, 
 
 Explain the difference between final, finally and finalize?
 Answer: Each of these keywords have a different functionality. The basic difference between final, finally and finalize
-        is that the final is an access modifier, finally is the block in Exception Handling and finalize is the
+        is that the final is an access modifier. finally is the block in Exception Handling and finalize is the
         method of object class.
 
 What is a constructor?
